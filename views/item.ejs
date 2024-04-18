@@ -1,0 +1,53 @@
+<!-- item.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/item.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title><%= item.title %></title>
+</head>
+<body>
+    <%- include('./partials/header.ejs')%>
+    <div>
+        <% if ((errorMessages && errorMessages.length > 0) || (successMessages && successMessages.length > 0)) { %>
+            <div>
+                <% if (errorMessages && errorMessages.length > 0) { %>
+                    <div class="container-error">
+                        <% errorMessages.forEach(message => { %>
+                            <%= message %><br>
+                        <% }); %>
+                    </div>
+                <% } %>
+                <% if (successMessages && successMessages.length > 0) { %>
+                    <div class="container-success">
+                        <% successMessages.forEach(message => { %>
+                            <%= message %><br>
+                        <% }); %>
+                    </div>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+    <div class="flex-container">
+        <div class="container-1">
+            <img src="<%= item.image %>" alt="<%= item.title %>">
+        </div>
+
+        <div class="container-2">
+            <h2><%= item.title %></h2>
+            <p><strong>Condition:</strong> <%= item.condition %></p>
+            <p><strong>Price:</strong> $<%= item.price %> | <%= item.totalOffers %> Offers</p>
+            <p><strong>Seller:</strong>  <%= item.seller.firstName + ' ' + item.seller.lastName%></p>
+            <p><%= item.details %></p>
+        </div>
+
+    </div>
+
+<%- include('./partials/footer.ejs')%>
+
+
+</body>
+</html>
+

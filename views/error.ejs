@@ -1,0 +1,11 @@
+<%- include('./partials/header.ejs')%>
+<% if (error && error.message) { %>
+    <div class="error-container">
+        <div class="error-message">
+            <img src="https://www.iconpacks.net/icons/1/free-error-icon-905-thumb.png" alt="Error Icon">
+            <h3><%= error.status %> Error</h3>
+            <p><%= error.message %></p>
+        </div>
+    </div>
+<% } %>
+<%- include('./partials/footer.ejs')%>

@@ -1,0 +1,64 @@
+<%- include('../partials/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/css/profile.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<div>
+    <% if ((errorMessages && errorMessages.length > 0) || (successMessages && successMessages.length > 0)) { %>
+        <div>
+            <% if (errorMessages && errorMessages.length > 0) { %>
+                <div class="container-2">
+                    <% errorMessages.forEach(message => { %>
+                        <%= message %><br>
+                    <% }); %>
+                </div>
+            <% } %>
+            <% if (successMessages && successMessages.length > 0) { %>
+                <div class="container-3">
+                    <% successMessages.forEach(message => { %>
+                        <%= message %><br>
+                    <% }); %>
+                </div>
+            <% } %>
+        </div>
+    <% } %>
+</div>
+    <br>
+    <h4>Welcome, <%=user.firstName%>!</h4>
+    <div class="flex-container">
+        <div class="flex-container-profile">
+            <div class="table-container">
+                <table>
+                    <% if(items.length) { %>
+                        <tr>
+                            <th>Item</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                        <% items.forEach(item => { %>
+                            <tr>
+                                <td><a href="/items/<%= item.id %>" class="items-link"><%= item.title %></a></td>
+                                <td>active</td>
+                                <td>
+                                    <form class="edit-button" method="GET" action="/items/<%= item.id %>/edit">
+                                        <button type="submit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    </form>
+                                    <form class="delete-button" method="POST" action="/items/<%= item.id %>?_method=DELETE">
+                                        <button type="submit"><i class="fa-regular fa-trash-can"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    <% } %>
+                </table>
+                <% if(!items.length) { %>
+                    <div class="no-items-message">
+                        <p>You have not added any items!</p>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <br>
+
+<%- include('../partials/footer.ejs')%>
+
+

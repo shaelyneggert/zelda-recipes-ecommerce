@@ -1,0 +1,45 @@
+<%- include('../partials/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/css/login.css">
+
+
+<div>
+    <% if ((errorMessages && errorMessages.length > 0) || (successMessages && successMessages.length > 0)) { %>
+        <div>
+            <% if (errorMessages && errorMessages.length > 0) { %>
+                <div class="container-2">
+                    <% errorMessages.forEach(message => { %>
+                        <%= message %><br>
+                    <% }); %>
+                </div>
+            <% } %>
+            <% if (successMessages && successMessages.length > 0) { %>
+                <div class="container-3">
+                    <% successMessages.forEach(message => { %>
+                        <%= message %><br>
+                    <% }); %>
+                </div>
+            <% } %>
+        </div>
+    <% } %>
+</div>
+
+<div class="background">
+    <div class="container">
+        <form action = '/users' method = 'POST' class="user-form">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <label for="lastName">Last Name</label></td>
+                <input type="text" id="lastName" name="lastName" required></td>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" minlength="3" required>
+
+                <input type="submit" value="Sign Up">      
+        </form>
+    </div>
+</div>
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,121 @@
+body {
+    background-color: #708090;
+    margin: 0;
+
+}
+
+
+h1 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: 6;
+    background-color: #f9f4ce;
+    border-radius: 20px;
+    font-family: Verdana, sans-serif;
+    height: 300px;
+    width: 220px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 665px;
+    align-items: center;
+    background-image: url('https://images8.alphacoders.com/131/1315005.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+    background-position: center;
+}
+
+
+.flex-container img {
+    height: 130px;
+    width: 135px;
+    margin-left: 44px;
+    margin-top: 30px;
+}
+
+.flex-container h4 {
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+/* title */
+.flex-container h3 {
+    font-size: 18px;
+    color: #4d5761;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.flex-container p.money {
+    color: red;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.flex-container p.offer {
+    color: black;
+    font-size: 15px;
+    margin-left: 150px;
+    margin-top: -38px;
+}
+
+
+
+.flex-container .items-link {
+    text-decoration: none; 
+}
+
+
+.custom-line {
+    border: none; 
+    border-top: 2px solid #4d5761; 
+    color:#4d5761;
+    margin: 10px 0;
+    margin-top: 10px;
+}
+
+
+.container-error {
+    width: 100%; 
+    height: 50px; 
+    background-color: red; 
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.container-success {
+    width: 100%; 
+    height: 50px; 
+    background-color: green; 
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}

@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    background-color: #708090;
+}
+
+.content {
+    margin-left: 10px;
+    font-family: Verdana, sans-serif;
+}
+
+
+.header-container {
+    background-color: #525a61;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: Verdana, sans-serif;
+    box-shadow: 2px 2px 5px #97c8d9;
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+.link {
+    text-decoration: none;
+}
+
+
+/* SEARCH CONTAINER */
+.search-container {
+    margin-top: 5px;
+    position: relative;
+    left: 90px;
+    font-family: Verdana, sans-serif;
+}
+
+.search-container input {
+    width: 200px; 
+    padding: 10px;
+    margin-right: 8px;
+    border: 2px solid #4d5761; 
+    background-color: #708090;
+    border-radius: 10px; 
+    font-size: 13px;
+}
+.search-container input::placeholder {
+    color: #4d5761;
+}
+.search-container button {
+    padding: 10px;
+    background: #708090;
+    border: 2px solid #4d5761; 
+    border-radius: 10px; 
+    cursor: pointer;
+    font-size: 13px; 
+    color: #4d5761;
+}
+
+/* NAV BAR */
+nav {
+    overflow: hidden;
+    font-size: 14px;
+    text-align: right;
+    font-family: Verdana, sans-serif;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    padding: 12px 5px;
+    text-decoration: none;
+}
+
+nav a.active {
+    color: #97c8d9;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: Verdana, sans-serif;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 81vh; 
+    font-size: 30px;
+    font-family: Verdana, sans-serif;
+}
+.error-container img {
+    height: 100px;
+    width: 100px;
+}
+
+.error-message {
+    text-align: center;
+}
+

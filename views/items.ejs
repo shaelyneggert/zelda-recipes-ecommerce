@@ -1,0 +1,56 @@
+<!-- items.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/items.css">
+    <title>Items</title>
+</head>
+<body>    
+<%- include('./partials/header.ejs')%>
+
+
+<div>
+    <% if ((errorMessages && errorMessages.length > 0) || (successMessages && successMessages.length > 0)) { %>
+        <div>
+            <% if (errorMessages && errorMessages.length > 0) { %>
+                <div class="container-error">
+                    <% errorMessages.forEach(message => { %>
+                        <%= message %><br>
+                    <% }); %>
+                </div>
+            <% } %>
+            <% if (successMessages && successMessages.length > 0) { %>
+                <div class="container-success">
+                    <% successMessages.forEach(message => { %>
+                        <%= message %><br>
+                    <% }); %>
+                </div>
+            <% } %>
+        </div>
+    <% } %>
+</div>
+
+
+
+
+
+    <div class="flex-container">
+        <% items.forEach(item => { %>
+            <div class="container">
+                <a href="/items/<%= item.id %>" class="items-link">
+                    <img src="<%= item.image %>" alt="<%= item.title %>">
+                    <h3><%= item.title %></h3>
+                    <h4><%= item.condition %></h4>
+                    <hr class="custom-line">
+                    <p class="money">$<%= item.price %></p>
+                    <p class="offer"><%= item.totalOffers %> Offers</p>
+                </a>
+            </div>
+        <%}); %>
+    </div>
+<%- include('./partials/footer.ejs')%>
+</body>
+</html>
+

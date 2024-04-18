@@ -1,0 +1,110 @@
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 600px;
+    align-items: center;
+    background-image: url('https://i.etsystatic.com/11200544/r/il/97562f/5095658984/il_fullxfull.5095658984_6c7a.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    background-position: center;
+}
+
+.flex-container-profile a {
+    text-decoration: none; 
+}
+h4 {
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
+
+.flex-container-profile {
+    display: flex;
+    flex-direction: row;
+}
+
+.edit-button,
+.delete-button {
+    display: inline-block;
+}
+
+.edit-button button,
+.delete-button button {
+    display: inline-block;
+    vertical-align: middle; 
+    margin-right: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-trash-can{
+    color: red;
+}
+.fa-pen-to-square {
+    color: green;
+}
+
+.table-container {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #97c8d9;
+    border-radius: 20px;
+    border: 5px solid #4d5761; 
+    border-radius: 10px;
+    width: 480px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, sans-serif;
+}
+
+table {
+    border-collapse: separate; 
+    border-spacing: 0 10px;
+}
+
+th, td {
+    border-bottom: 1px solid #4d5761; 
+    padding: 8px; 
+}
+
+th {
+    text-align: left;
+}
+
+td:nth-child(1) { 
+    width: 250px;
+}
+
+td:nth-child(2) {
+    width: 100px; 
+}
+
+
+
+.container-2 {
+    width: 100%; 
+    height: 50px; 
+    background-color: red; 
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.container-3 {
+    width: 100%; 
+    height: 50px; 
+    background-color: green; 
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}

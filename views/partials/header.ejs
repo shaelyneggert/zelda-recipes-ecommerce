@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header-container">
+        <a href="/" class = "link">
+            <h1><i class="fa-solid fa-utensils"></i> TCK</h1>
+        </a>
+        <div class="search-container">
+            <form action="/items" method="GET">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    <nav>
+        <a href="/items">Browse</a>
+        <a href="/items/new">Sell</a>
+
+        <%if(!user) {%>
+            <a href='/users/new'>Sign Up</a>
+            <a href='/users/login'>Login</a>
+        <%} else {%>
+            <a href='/users/profile'>My Account</a>
+            <a href='/users/logout'>Logout</a>
+        <%}%>
+
+    </nav>
+    </header>
+
+</body>
+</html>
